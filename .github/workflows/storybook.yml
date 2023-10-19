@@ -20,7 +20,7 @@ jobs:
       - run: |
           git fetch
           git checkout storybook
-          git merge main
+          git merge main --allow-unrelated-histories
 
       - run: |
           npm i

@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          token: ${{ secrets.DEMO_PAT }}
           registry-url: https://npm.pkg.github.com/
       - uses: actions/setup-node@v3
       - run: |

@@ -17,6 +17,8 @@ jobs:
         with:
           token: ${{ secrets.DEMO_PAT }}
       - uses: actions/setup-node@v3
+        with:
+          registry-url: https://npm.pkg.github.com/
       - run: |
           git config --global user.name "Daniel Bali"
           git config --global user.email "daniel.bali@benestudio.co"
@@ -24,8 +26,6 @@ jobs:
       - run: npm i
       - run: npm run build
       - run: npm publish
-        with:
-          registry-url: https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: git push

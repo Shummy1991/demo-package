@@ -23,7 +23,7 @@ jobs:
           git merge main
 
       - run: |
-          npm ci
+          npm i
           npm run build-storybook
           rm -rf docs
           mv storybook-static docs

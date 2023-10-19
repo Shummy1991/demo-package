@@ -16,8 +16,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.DEMO_PAT }}
-          registry-url: https://npm.pkg.github.com/
       - uses: actions/setup-node@v3
+        with:
+          registry-url: https://npm.pkg.github.com/
       - run: |
           git config --global user.name "Daniel Bali"
           git config --global user.email "daniel.bali@benestudio.co"

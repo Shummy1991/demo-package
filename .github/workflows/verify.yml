@@ -1,4 +1,4 @@
-name: Publish package
+name: Verify
 
 on:
   workflow_dispatch:
